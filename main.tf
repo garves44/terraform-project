@@ -11,12 +11,12 @@ terraform {
 provider "aws" {
   //set region depending on region in AWS
   region = "us-east-1"
-  access_key = "${myAccessKey}"
-  secret_key = "${mySecretKey}"
+  access_key = "test-key"
+  secret_key = "test-secret"
 }
 
 resource "aws_instance" "web" {
-  ami = "${amiTag}"
+  ami = "testami"
   instance_type = "t2.micro"
   
 }
